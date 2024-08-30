@@ -10,15 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.primaryOrange)
-                Text("Hello, Circa!")
-                    .bold()
-                    .foregroundStyle(.textPrimary)
+            HStack(alignment: .top) {
+                VStack(alignment: .leading) {
+                    Text("Hi Damilare,")
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 24))
+                        .foregroundStyle(.textPrimary)
+                        .kerning(-0.26)
+                    Text("Here’s your sleep data for the past week.")
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 15))
+                        .foregroundStyle(.textSecondary)
+                        .kerning(-0.43)
+                  
+                }
+                .padding(.horizontal)
+                Image(systemName: "person.circle.fill")
+                    .font(.system(size: 32))
             }
-            .padding()
+            .frame(width: .infinity)
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBG)

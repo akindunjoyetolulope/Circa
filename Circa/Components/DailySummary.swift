@@ -94,11 +94,8 @@ struct DailySummary: View {
        
 
     }
-    
-    
+   
 }
-
-
 
 
 class MockSleepViewModel: SleepViewModel {
