@@ -9,14 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, Circa!")
+        ZStack{
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.primaryOrange)
+                Text("Hello, Circa!")
+                    .bold()
+                    .foregroundStyle(.textPrimary)
+            }
+            .padding()
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.appBG)
+        .ignoresSafeArea(.all)
     }
+    
+    /*init() {
+         for familyName in UIFont.familyNames {
+             print(familyName)
+             
+             for fontName in UIFont.fontNames(forFamilyName:familyName) {
+                 print("--\(fontName)")
+             }
+         }
+     }*/
 }
 
 #Preview {
