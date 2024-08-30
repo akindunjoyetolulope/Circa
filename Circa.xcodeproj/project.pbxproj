@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48483AD02C8227CB000AE80E /* RecommendedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483ACF2C8227CB000AE80E /* RecommendedAction.swift */; };
 		48D6E4992C82056200001C8F /* CircaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4982C82056200001C8F /* CircaApp.swift */; };
 		48D6E49B2C82056300001C8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E49A2C82056300001C8F /* ContentView.swift */; };
 		48D6E49D2C82056400001C8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D6E49C2C82056400001C8F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48483ACF2C8227CB000AE80E /* RecommendedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAction.swift; sourceTree = "<group>"; };
 		48D6E4952C82056200001C8F /* Circa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D6E4982C82056200001C8F /* CircaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircaApp.swift; sourceTree = "<group>"; };
 		48D6E49A2C82056300001C8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48483ACE2C822760000AE80E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				48483ACF2C8227CB000AE80E /* RecommendedAction.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		48D6E48C2C82056200001C8F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		48D6E4972C82056200001C8F /* Circa */ = {
 			isa = PBXGroup;
 			children = (
+				48483ACE2C822760000AE80E /* Components */,
 				48D6E4982C82056200001C8F /* CircaApp.swift */,
 				48D6E49A2C82056300001C8F /* ContentView.swift */,
 				48D6E49C2C82056400001C8F /* Assets.xcassets */,
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D6E49B2C82056300001C8F /* ContentView.swift in Sources */,
+				48483AD02C8227CB000AE80E /* RecommendedAction.swift in Sources */,
 				48D6E4992C82056200001C8F /* CircaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
