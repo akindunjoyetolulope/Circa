@@ -2,7 +2,7 @@
 //  CircaApp.swift
 //  Circa
 //
-//  Created by Busha Digital Ltd on 30/08/2024.
+//  Created by Damilare on 30/08/2024.
 //
 
 import SwiftUI
