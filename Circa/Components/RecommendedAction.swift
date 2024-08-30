@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct RecommendedAction: View {
+    @State private var vibrateOnRing = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Toggle(isOn: $vibrateOnRing) {
+            Text("Vibrate on Ring")
+        }
     }
 }
 
