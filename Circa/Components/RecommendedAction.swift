@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct RecommendedAction: View {
-    @State private var vibrateOnRing = false
-
+    @State private var setRecommendedAction = false
+    
     var body: some View {
-        Toggle(isOn: $vibrateOnRing) {
-            Text("Vibrate on Ring")
+
+        HStack(spacing: 6) {
+            Text("Send me a reminder 30mins before my recommended sleep time")
+                .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
+                .foregroundColor(.white)
+            
+            Spacer()
+            Toggle("Alarm", isOn: $setRecommendedAction)
+                .toggleStyle(.switch)
+                .labelsHidden()
         }
+        .padding(14)
+        .background(Color.cardBG)
+        .cornerRadius(16)
+        .padding(14)
     }
 }
+
+
 
 #Preview {
     RecommendedAction()

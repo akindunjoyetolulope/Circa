@@ -9,7 +9,24 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing:3) {
+                VStack(alignment: .leading) {
+                    Text("Hi Toluwalope,")
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 24))
+                        .foregroundStyle(.textPrimary)
+                        .kerning(-0.26)
+                    Text("Here’s your sleep data for the past week.")
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 15))
+                        .foregroundStyle(.textSecondary)
+                        .kerning(-0.43)
+                  
+                }
+                Spacer()
+                Image(systemName: "person.circle.fill")
+                    .font(.system(size: 32))
+                    .foregroundStyle(.textPrimary)
+            }
+        .padding()
     }
 }
 
