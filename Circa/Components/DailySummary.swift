@@ -18,7 +18,6 @@ struct DailySummary: View {
         ZStack(alignment: .topLeading) {
             Color.cardBG
             VStack(spacing: 12) {
-                
                 HStack {
                     VStack (alignment: .leading, spacing: 6){
                         Text("Last night's sleep")
@@ -40,17 +39,17 @@ struct DailySummary: View {
                     
                     Spacer()
                     
-                    Image(systemName: "waveform.path.ecg")
-                        .font(.title)
-                        .foregroundColor(.primaryOrange)
-                    
+                    WeeklyBarView()
+                        .chartYAxis(.hidden)
+                        .chartXAxis(.hidden)
+                        .frame(width: .infinity, height: 60)
                 }
                 
                 
                 Divider()
                     .background(.cardStroke)
                 
-
+                
                 HStack {
                     
                     HStack(alignment: .top) {
@@ -87,14 +86,14 @@ struct DailySummary: View {
                 
             }
             .padding()
-             
+            
         }
-        .frame(width: 380, height: 200)
+        .frame(height: 180)
         .cornerRadius(16)
-       
-
+        
+        
     }
-   
+    
 }
 
 
@@ -117,9 +116,6 @@ struct dailySummary_Previews: PreviewProvider {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .ignoresSafeArea()
                 .background(Color.appBG)
-                
-                
-            
         }
     }
 }
