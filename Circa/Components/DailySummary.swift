@@ -54,7 +54,7 @@ struct DailySummary: View {
                     .background(.cardStroke)
                 
 
-                HStack {
+                HStack(spacing: 8){
                     
                     HStack(alignment: .top) {
                         Image(systemName: "clock.fill")
@@ -64,14 +64,11 @@ struct DailySummary: View {
                                 .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
                                 .kerning(-0.3)
                                 .foregroundStyle(.white) +
-                            Text("09:30 PM ")
+                            Text("09:30 PM tonight")
                                 .font(.custom("FKGroteskNeueTrial-Medium", size: 12))
                                 .kerning(-0.3)
                                 .foregroundStyle(.white)
-                            Text("tonight")
-                                .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
-                                .kerning(-0.3)
-                                .foregroundStyle(.white)
+                           
                             
                             
                             Text("Click toggle to set alarm")
