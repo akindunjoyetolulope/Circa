@@ -23,7 +23,7 @@ struct WeeklyBarView: View {
         Chart {
             ForEach(data) { dataPoint in
                 
-                BarMark(x: .value("Date", dataPoint.date), y: .value("Time", dataPoint.time))
+                LineMark(x: .value("Date", dataPoint.date), y: .value("Time", dataPoint.time))
                     .cornerRadius(8)
             }
         }

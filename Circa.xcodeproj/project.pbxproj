@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481123712C886D9D00ADF1E1 /* WeeklyBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123702C886D9D00ADF1E1 /* WeeklyBarView.swift */; };
 		48483AD02C8227CB000AE80E /* RecommendedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483ACF2C8227CB000AE80E /* RecommendedAction.swift */; };
 		48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483AD12C829FE5000AE80E /* HeaderView.swift */; };
 		48D6E4992C82056200001C8F /* CircaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4982C82056200001C8F /* CircaApp.swift */; };
@@ -21,7 +22,6 @@
 		E39786B52C8251E800646482 /* sleepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39786B42C8251E800646482 /* sleepViewModel.swift */; };
 		E39786B82C8282D700646482 /* FKGroteskNeueTrial-Regular-BF6576818c3af74.otf in Resources */ = {isa = PBXBuildFile; fileRef = E39786B72C8282D700646482 /* FKGroteskNeueTrial-Regular-BF6576818c3af74.otf */; };
 		E39786BA2C82876800646482 /* FKGroteskNeueTrial-Medium-BF6576818c3a00a.otf in Resources */ = {isa = PBXBuildFile; fileRef = E39786B92C82876800646482 /* FKGroteskNeueTrial-Medium-BF6576818c3a00a.otf */; };
-		E39B52282C8481210056A723 /* WeeklyBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39B52272C8481210056A723 /* WeeklyBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		481123702C886D9D00ADF1E1 /* WeeklyBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyBarView.swift; sourceTree = "<group>"; };
 		48483ACF2C8227CB000AE80E /* RecommendedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAction.swift; sourceTree = "<group>"; };
 		48483AD12C829FE5000AE80E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		48D6E4952C82056200001C8F /* Circa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +62,6 @@
 		E39786B42C8251E800646482 /* sleepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepViewModel.swift; sourceTree = "<group>"; };
 		E39786B72C8282D700646482 /* FKGroteskNeueTrial-Regular-BF6576818c3af74.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FKGroteskNeueTrial-Regular-BF6576818c3af74.otf"; sourceTree = "<group>"; };
 		E39786B92C82876800646482 /* FKGroteskNeueTrial-Medium-BF6576818c3a00a.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FKGroteskNeueTrial-Medium-BF6576818c3a00a.otf"; sourceTree = "<group>"; };
-		E39B52272C8481210056A723 /* WeeklyBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4811236D2C886D6D00ADF1E1 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				481123702C886D9D00ADF1E1 /* WeeklyBarView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		48483ACE2C822760000AE80E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +130,7 @@
 		48D6E4972C82056200001C8F /* Circa */ = {
 			isa = PBXGroup;
 			children = (
-				E39B52262C8480FB0056A723 /* Charts */,
+				4811236D2C886D6D00ADF1E1 /* Chart */,
 				E39786B62C827F9700646482 /* Fonts */,
 				E39786AF2C824BD100646482 /* Circa.entitlements */,
 				E39786AE2C824A8900646482 /* Info.plist */,
@@ -185,14 +193,6 @@
 				E39786B72C8282D700646482 /* FKGroteskNeueTrial-Regular-BF6576818c3af74.otf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		E39B52262C8480FB0056A723 /* Charts */ = {
-			isa = PBXGroup;
-			children = (
-				E39B52272C8481210056A723 /* WeeklyBarView.swift */,
-			);
-			path = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +334,7 @@
 				48D6E4992C82056200001C8F /* CircaApp.swift in Sources */,
 				E39786B22C82518900646482 /* HealthManager.swift in Sources */,
 				48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */,
-				E39B52282C8481210056A723 /* WeeklyBarView.swift in Sources */,
+				481123712C886D9D00ADF1E1 /* WeeklyBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
