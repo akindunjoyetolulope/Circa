@@ -11,7 +11,7 @@ struct HeaderView: View {
     var body: some View {
         HStack(spacing:3) {
                 VStack(alignment: .leading) {
-                    Text("Hi Toluwalope,")
+                    Text("Hi Damilare,")
                         .font(.custom("FKGroteskNeueTrial-Regular", size: 24))
                         .foregroundStyle(.textPrimary)
                         .kerning(-0.26)
@@ -23,7 +23,7 @@ struct HeaderView: View {
                 }
                 Spacer()
                 Image(systemName: "person.circle.fill")
-                    .font(.system(size: 32))
+                    .font(.system(size: 24))
                     .foregroundStyle(.textPrimary)
             }
         .padding()

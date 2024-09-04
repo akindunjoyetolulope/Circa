@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481123712C886D9D00ADF1E1 /* WeeklyBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123702C886D9D00ADF1E1 /* WeeklyBarView.swift */; };
+
 		481123652C8755C800ADF1E1 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123642C8755C800ADF1E1 /* Overview.swift */; };
 		4811236C2C87A95B00ADF1E1 /* BarchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811236B2C87A95B00ADF1E1 /* BarchartView.swift */; };
+
 		48483AD02C8227CB000AE80E /* RecommendedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483ACF2C8227CB000AE80E /* RecommendedAction.swift */; };
 		48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483AD12C829FE5000AE80E /* HeaderView.swift */; };
 		48D6E4992C82056200001C8F /* CircaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4982C82056200001C8F /* CircaApp.swift */; };
@@ -43,8 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
+		481123702C886D9D00ADF1E1 /* WeeklyBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyBarView.swift; sourceTree = "<group>"; };
+
 		481123642C8755C800ADF1E1 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		4811236B2C87A95B00ADF1E1 /* BarchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarchartView.swift; sourceTree = "<group>"; };
+
 		48483ACF2C8227CB000AE80E /* RecommendedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAction.swift; sourceTree = "<group>"; };
 		48483AD12C829FE5000AE80E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		48D6E4952C82056200001C8F /* Circa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,12 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		4811236D2C886D6D00ADF1E1 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				481123702C886D9D00ADF1E1 /* WeeklyBarView.swift */,
+			);
+			path = Chart;
+
 		4811236A2C87A93600ADF1E1 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
 				4811236B2C87A95B00ADF1E1 /* BarchartView.swift */,
 			);
 			path = Charts;
+
 			sourceTree = "<group>";
 		};
 		48483ACE2C822760000AE80E /* Components */ = {
@@ -133,7 +149,11 @@
 		48D6E4972C82056200001C8F /* Circa */ = {
 			isa = PBXGroup;
 			children = (
+
+				4811236D2C886D6D00ADF1E1 /* Chart */,
+
 				4811236A2C87A93600ADF1E1 /* Charts */,
+
 				E39786B62C827F9700646482 /* Fonts */,
 				E39786AF2C824BD100646482 /* Circa.entitlements */,
 				E39786AE2C824A8900646482 /* Info.plist */,
@@ -339,6 +359,7 @@
 				48D6E4992C82056200001C8F /* CircaApp.swift in Sources */,
 				E39786B22C82518900646482 /* HealthManager.swift in Sources */,
 				48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */,
+				481123712C886D9D00ADF1E1 /* WeeklyBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
