@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-
 struct RecommendedAction: View {
     @State private var setRecommendedAction = false
     
     var body: some View {
-
         HStack(spacing: 6) {
             Text("Send me a reminder 30mins before my recommended sleep time")
                 .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
@@ -25,12 +23,15 @@ struct RecommendedAction: View {
         .padding(14)
         .background(Color.cardBG)
         .cornerRadius(16)
-        .padding(14)
     }
 }
 
+struct RecommendedData {
+    let text: String = "Send me a reminder 30mins before my recommended sleep time"
+}
 
 
 #Preview {
     RecommendedAction()
 }
+

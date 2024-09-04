@@ -10,10 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            VStack{
+            VStack(spacing: 4){
                 HeaderView()
+                DailySummary(viewModel: SleepViewModel())
+                .padding(.horizontal)
+                Overview().padding()
+                VStack(alignment: .leading){
+                    Text("Recommended Actions")
+                    RecommendedAction()
+                    RecommendedAction()
+                }.padding(.horizontal)
                 Spacer()
-                Text("Hello Circa")
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.appBG)
