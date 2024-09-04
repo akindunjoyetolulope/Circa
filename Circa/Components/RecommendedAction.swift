@@ -25,8 +25,12 @@ struct RecommendedAction: View {
         .padding(14)
         .background(Color.cardBG)
         .cornerRadius(16)
-        .padding(14)
     }
+}
+
+struct RecommendedData {
+    let text: String = "Send me a reminder 30mins before my recommended sleep time"
+    let toggle: Bool = false
 }
 
 

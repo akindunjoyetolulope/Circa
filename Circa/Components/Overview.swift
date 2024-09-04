@@ -19,9 +19,9 @@ struct Overview: View {
                         .foregroundColor(.white)
                         .bold()
                     
-//                    BarchartView()
+                    BarChartView().frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).padding(.top)
                 }
-                .padding()
+                .padding(16)
 
                 Divider().background(.gray)
                 
@@ -50,7 +50,6 @@ struct Overview: View {
             }
             .background(Color.cardBG)
             .cornerRadius(16)
-            .padding(14)
         }
     }
     
