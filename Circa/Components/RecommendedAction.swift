@@ -8,10 +8,11 @@
 import SwiftUI
 struct RecommendedAction: View {
     @State private var setRecommendedAction = false
+    let message: String
     
     var body: some View {
         HStack(spacing: 6) {
-            Text("Send me a reminder 30mins before my recommended sleep time")
+            Text("\(message)")
                 .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
                 .foregroundColor(.white)
             
@@ -26,12 +27,8 @@ struct RecommendedAction: View {
     }
 }
 
-struct RecommendedData {
-    let text: String = "Send me a reminder 30mins before my recommended sleep time"
-}
-
-
 #Preview {
-    RecommendedAction()
+    RecommendedAction(message: "Turn on DND by  09:00 PM")
 }
+
 
