@@ -15,9 +15,9 @@ struct Overview: View {
                 VStack(alignment: .leading){
 
                     Text("Weekly Overview")
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
-                        .bold()
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 14))
+                        .kerning(-0.3)
+                        .foregroundStyle(.white)
 
                     BarChartView().frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).padding(.top)
                 }
@@ -32,9 +32,10 @@ struct Overview: View {
                         VStack(alignment: .leading, spacing: 2){
                             Text("You averaged 4hr 44min in bed")
                                 .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
+                                .kerning(-0.3)
                                 .foregroundColor(.white)
                             Text("23-29 Aug 2024")
-                                .font(.custom("FKGroteskNeueTrial-Regular", size: 10))
+                                .font(.custom("FKGroteskNeueTrial-Medium", size: 10))
                                 .foregroundColor(.yellow)
                         }
 

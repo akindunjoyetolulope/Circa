@@ -13,8 +13,8 @@ struct WeeklyLineView: View {
 
     let data = [WeeklySummary(date: "Fri", time: 2.1),
                 WeeklySummary(date: "Sat", time: 3.0),
-                WeeklySummary(date: "Sun", time: 4.5),
-                WeeklySummary(date: "Mon", time: 2.0),
+                WeeklySummary(date: "Sun", time: 4.2),
+                WeeklySummary(date: "Mon", time: 3.0),
                 WeeklySummary(date: "Tue", time: 2.8),
                 WeeklySummary(date: "Wed", time: 3.8),
                 WeeklySummary(date: "Thu", time: 4.3)
@@ -22,16 +22,17 @@ struct WeeklyLineView: View {
     var body: some View {
         Chart {
             ForEach(data) { dataPoint in
-
-                LineMark(x: .value("Date", dataPoint.date), y: .value("Time", dataPoint.time))
+                    LineMark(x: .value("Date", dataPoint.date),
+                         y: .value("Time", dataPoint.time))
                     .lineStyle(StrokeStyle.init(lineWidth: 2))
                     .cornerRadius(8)
                     
             }
             RuleMark(y: .value("days", 3.0))
                 .foregroundStyle(.primaryOrange)
-                .lineStyle(StrokeStyle(lineWidth: 1, dash: [2]))
+                .lineStyle(StrokeStyle(lineWidth: 2, dash: [3]))
         }
+        
         .chartYScale(domain: 0...8)
         .foregroundStyle(.primaryOrange)
         .aspectRatio(contentMode: .fit)

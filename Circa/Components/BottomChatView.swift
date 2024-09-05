@@ -21,8 +21,8 @@ struct BottomChatView: View {
     }
     
     func sendMessage() {
-        print("Sending message: \(message)")
-        message = ""
+        print(message)
+       
     }
 }
 
@@ -34,22 +34,22 @@ struct CustomMessageField: View {
     var body: some View {
         HStack(spacing: 10) {
             TextField("Send me a message...", text: $message)
-                .font(.custom("FKGroteskNeueTrial-Regular", size: 12))
+                .font(.custom("FKGroteskNeueTrial-Regular", size: 13))
                 .kerning(-0.43)
-                
+            
             
             Button(action: {
-                            if !message.isEmpty {
-                                onSend()
-                            }
-                        }) {
-                            Image(systemName: message.isEmpty ? "mic.fill" : "arrowshape.up.circle.fill")
-                                .font(.system(size: 20))
-                                .foregroundColor(message.isEmpty ? .primaryOrange : .green)
-                        
+                if !message.isEmpty {
+                    onSend()
+                }
+            }) {
+                Image(systemName: message.isEmpty ? "mic.fill" : "arrowshape.up.circle.fill")
+                    .font(.system(size: 20))
+                    .foregroundColor(message.isEmpty ? .primaryOrange : .green)
+                
             }
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 8)
         .padding(.vertical, 12)
         .background(Color.appBG)
         .overlay(
