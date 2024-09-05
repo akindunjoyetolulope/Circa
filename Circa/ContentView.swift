@@ -10,15 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            VStack(spacing: 4){
+            VStack(spacing: 2){
                 HeaderView()
                 DailySummary(viewModel: SleepViewModel())
                 .padding(.horizontal)
                 Overview().padding()
                 VStack(alignment: .leading){
                     Text("Recommended Actions")
-                    RecommendedAction()
-                    RecommendedAction()
+                    RecommendedAction(message: "Turn on DND by  09:00 PM")
+                    RecommendedAction(message: "Send me a reminder 30mins before my recommended sleep time")
                 }.padding(.horizontal)
                 Spacer()
             }
