@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             VStack(spacing: 2){
-                HeaderView()
+                HeaderView(userName: userName ?? "Circarian")
                 ScrollView{
                     VStack(spacing: 0){
                         DailySummary(viewModel: SleepViewModel())
