@@ -36,17 +36,16 @@ struct DailySummary: View {
                             .foregroundColor(.white) + Text(viewModel.sleepQuality).font(.system(size: 13))
                             .foregroundColor(
                                 viewModel.sleepQuality == "Good" ? .green :
-                                viewModel.sleepQuality == "Fair" ? .yellow :
-                                .primaryOrange
+                                    viewModel.sleepQuality == "Fair" ? .yellow : .primaryOrange
                             )
                     }
                     
                     Spacer()
                     
-                    WeeklyBarView()
+                    WeeklyLineView()
                         .chartYAxis(.hidden)
                         .chartXAxis(.hidden)
-                        .frame( height: 60)
+                        .frame(height: 60)
                 }
                 
                 
