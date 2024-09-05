@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
 
     @State private var name: String = ""
+//    let userName = UserDefaults.standard.string(forKey: "userName")
     
     var body: some View {
         VStack(spacing: 24){

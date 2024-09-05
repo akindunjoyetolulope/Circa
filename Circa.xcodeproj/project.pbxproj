@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		481123742C886F3100ADF1E1 /* WeeklyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123732C886F3100ADF1E1 /* WeeklyLineView.swift */; };
 		481123762C886F5E00ADF1E1 /* BarchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123752C886F5E00ADF1E1 /* BarchartView.swift */; };
 		481123782C886FB600ADF1E1 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123772C886FB600ADF1E1 /* Overview.swift */; };
 		4811237B2C8874D200ADF1E1 /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811237A2C8874D200ADF1E1 /* type.swift */; };
 		4811237D2C8A00F900ADF1E1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811237C2C8A00F900ADF1E1 /* OnboardingView.swift */; };
 		481123812C8A1B1100ADF1E1 /* OnboardingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123802C8A1B1100ADF1E1 /* OnboardingForm.swift */; };
+		481123832C8A779E00ADF1E1 /* WeeklyLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481123822C8A779E00ADF1E1 /* WeeklyLineView.swift */; };
 		48483AD02C8227CB000AE80E /* RecommendedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483ACF2C8227CB000AE80E /* RecommendedAction.swift */; };
 		48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48483AD12C829FE5000AE80E /* HeaderView.swift */; };
 		48D6E4992C82056200001C8F /* CircaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4982C82056200001C8F /* CircaApp.swift */; };
@@ -48,12 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		481123732C886F3100ADF1E1 /* WeeklyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyLineView.swift; sourceTree = "<group>"; };
 		481123752C886F5E00ADF1E1 /* BarchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarchartView.swift; sourceTree = "<group>"; };
 		481123772C886FB600ADF1E1 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		4811237A2C8874D200ADF1E1 /* type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
 		4811237C2C8A00F900ADF1E1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		481123802C8A1B1100ADF1E1 /* OnboardingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingForm.swift; sourceTree = "<group>"; };
+		481123822C8A779E00ADF1E1 /* WeeklyLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyLineView.swift; sourceTree = "<group>"; };
 		48483ACF2C8227CB000AE80E /* RecommendedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedAction.swift; sourceTree = "<group>"; };
 		48483AD12C829FE5000AE80E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		48D6E4952C82056200001C8F /* Circa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +104,8 @@
 		481123722C886EF100ADF1E1 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				481123732C886F3100ADF1E1 /* WeeklyLineView.swift */,
 				481123752C886F5E00ADF1E1 /* BarchartView.swift */,
+				481123822C8A779E00ADF1E1 /* WeeklyLineView.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -362,10 +362,9 @@
 				48D6E4992C82056200001C8F /* CircaApp.swift in Sources */,
 				481123762C886F5E00ADF1E1 /* BarchartView.swift in Sources */,
 				E39786B22C82518900646482 /* HealthManager.swift in Sources */,
+				481123832C8A779E00ADF1E1 /* WeeklyLineView.swift in Sources */,
 				48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */,
 				4811237D2C8A00F900ADF1E1 /* OnboardingView.swift in Sources */,
-				481123742C886F3100ADF1E1 /* WeeklyBarView.swift in Sources */,
-				481123742C886F3100ADF1E1 /* WeeklyLineView.swift in Sources */,
 				4811237B2C8874D200ADF1E1 /* type.swift in Sources */,
 				E38F3EA02C89D09200AD7730 /* BottomChatView.swift in Sources */,
 			);
