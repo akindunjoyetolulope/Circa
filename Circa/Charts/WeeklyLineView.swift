@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 
-struct WeeklyBarView: View {
+struct WeeklyLineView: View {
 
     let data = [WeeklySummary(date: "Fri", time: 3.1),
                 WeeklySummary(date: "Sat", time: 2.0),
@@ -45,5 +45,5 @@ struct WeeklySummary: Identifiable {
 
 
 #Preview {
-    WeeklyBarView()
+    WeeklyLineView()
 }
