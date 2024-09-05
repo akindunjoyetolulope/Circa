@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            VStack(spacing: 4){
+            VStack(spacing: 2){
                 HeaderView()
                 DailySummary(viewModel: SleepViewModel())
                 .padding(.horizontal)

@@ -26,13 +26,18 @@ class SleepViewModel: ObservableObject {
                     let duration = sample.endDate.timeIntervalSince(sample.startDate) / 3600
                     self?.sleepDuration = String(format: "%.0fh %.0fm", floor(duration), (duration - floor(duration)) * 60)
                     
-                    // Example sleep quality analysis
-                    self?.sleepQuality = duration >= 7 ? "Good" : "Terrible"
+                    // Updated sleep quality analysis
+                    if duration >= 7 {
+                        self?.sleepQuality = "Good"
+                    } else if duration >= 5 {
+                        self?.sleepQuality = "Fair"
+                    } else {
+                        self?.sleepQuality = "Terrible"
+                    }
                 } else {
                     self?.sleepDuration = "No data"
                     self?.sleepQuality = "Unknown"
                 }
             }
         }
-    }
-}
+    }}
