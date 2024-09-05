@@ -42,7 +42,7 @@ struct BarChartView: View {
                 AxisMarks(position: .leading, values: .automatic(desiredCount: 7))
                 { value in
                     AxisGridLine(stroke: StrokeStyle( dash: [2]))
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.cardStroke)
                     AxisTick()
                     AxisValueLabel().foregroundStyle(Color.white)
 
@@ -59,7 +59,7 @@ struct BarChartView: View {
             .chartYScale(domain: [0,12])
             .chartXAxis {
                 AxisMarks(values: .automatic) {
-                    AxisGridLine().foregroundStyle(.gray)
+                    AxisGridLine().foregroundStyle(.cardStroke)
                     AxisValueLabel().foregroundStyle(Color.white)
                 }
             }

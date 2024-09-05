@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct CircaApp: App {
+    //    let userName = UserDefaults.standard.string(forKey: "userName")
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            OnboardingView()
+            
             
         }
     }
