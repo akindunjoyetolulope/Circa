@@ -23,7 +23,7 @@ struct HeaderView: View {
                 }
                 Spacer()
                 Image(systemName: "person.circle.fill")
-                    .font(.system(size: 24))
+                    .font(.system(size: 32))
                     .foregroundStyle(.textPrimary)
             }
         .padding()
