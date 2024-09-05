@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let userName = UserDefaults.standard.string(forKey: "userName")
+    
     var body: some View {
         ZStack{
             VStack(spacing: 2){
-                HeaderView()
+                HeaderView(userName: userName ?? "Circarian")
                 DailySummary(viewModel: SleepViewModel())
                 .padding(.horizontal)
                 Overview().padding()

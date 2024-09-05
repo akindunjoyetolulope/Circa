@@ -46,7 +46,7 @@ struct DailySummary: View {
                     WeeklyBarView()
                         .chartYAxis(.hidden)
                         .chartXAxis(.hidden)
-                        .frame(width: .infinity, height: 60)
+                        .frame( height: 60)
                 }
                 
                 

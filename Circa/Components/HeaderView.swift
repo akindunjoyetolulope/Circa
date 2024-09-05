@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct HeaderView: View {
+    var userName: String
+    
     var body: some View {
         HStack(spacing:3) {
                 VStack(alignment: .leading) {
-                    Text("Hi Toluwalope,")
+                    Text("Hi \(userName),")
                         .font(.custom("FKGroteskNeueTrial-Regular", size: 24))
                         .foregroundStyle(.textPrimary)
                         .kerning(-0.26)
@@ -31,5 +33,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(userName: "Akindunjoye")
 }
