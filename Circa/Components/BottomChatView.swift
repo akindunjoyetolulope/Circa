@@ -35,6 +35,7 @@ struct CustomMessageField: View {
         HStack(spacing: 10) {
             TextField("Send me a message...", text: $message)
                 .font(.custom("FKGroteskNeueTrial-Regular", size: 13))
+                .tint(.primaryOrange)
                 .kerning(-0.43)
             
             
