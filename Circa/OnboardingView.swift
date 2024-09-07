@@ -21,9 +21,11 @@ struct OnboardingView: View {
                 
                 Text("I'm your personal sleep assistant, designed to analyze your health data and provide tailored sleep recommendations.")
                     .font(.custom("FKGroteskNeueTrial-Regular", size: 15))
+                    .foregroundStyle(.textSecondary)
                 
                 Text("Let's optimize your sleep schedule together!")
                     .font(.custom("FKGroteskNeueTrial-Regular", size: 15))
+                    .foregroundStyle(.textSecondary)
             }
             VStack{
                 OnboardingForm()
