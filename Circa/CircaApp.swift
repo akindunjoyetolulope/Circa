@@ -12,7 +12,8 @@ struct CircaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            ContentView()
+            
         }
     }
 }

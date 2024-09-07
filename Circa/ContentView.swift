@@ -21,6 +21,7 @@ struct ContentView: View {
                         Overview().padding()
                         VStack(alignment: .leading){
                             Text("Recommended Actions")
+                                .foregroundStyle(.textPrimary)
                             RecommendedAction(message: "Turn on DND by  09:00 PM")
                             RecommendedAction(message: "Send me a reminder 30mins before my recommended sleep time")
                         }.padding(.horizontal)

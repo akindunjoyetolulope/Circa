@@ -47,10 +47,10 @@ struct CustomizeTextField: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(.primaryGray.opacity(0.3), lineWidth: 1)
+                .stroke(.textFieldBorder, lineWidth: 1)
         )
         .background(.textFieldBg)
-        
+            
         Button(action: {
             if !name.isEmpty {
                 onContinue()
