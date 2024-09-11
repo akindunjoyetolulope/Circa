@@ -8,27 +8,28 @@
 import SwiftUI
 
 struct OnboardingForm: View {
-    @State private var name = ""
+    @State private var isOnboardingShown: Bool = !UserDefaults.standard.bool(forKey: "onboardingCompleted")
+    @State private var userName: String = " "
     
     var body: some View {
         VStack{
-            CustomizeTextField(name: $name, onContinue: saveName)
+            CustomizeTextField(isOnboardingShown: $isOnboardingShown, userName: $userName)
         }
     }
     
-    func saveName() {
-        UserDefaults.standard.set($name, forKey: "userName")
-    }
+
 }
 
 
 
 struct CustomizeTextField: View {
-    @Binding var name: String
+    @Binding var isOnboardingShown: Bool
+    @Binding var userName: String
+    @State private var name: String = ""
     @FocusState private var isFocused: Bool
     @State private var active = false
     
-    var onContinue: () -> Void
+    
     
     var body: some View {
        
@@ -51,33 +52,34 @@ struct CustomizeTextField: View {
                         .stroke(.textFieldBorder, lineWidth: 1)
                 )
                 .background(.textFieldBg)
+        
+        NavigationLink(destination: ContentView(name: name)) {
+            Text("Continue")
+                .foregroundColor(.white)
+                .disabled(name.isEmpty)
+                .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
+                .padding(.vertical, 12)
+                .frame(maxWidth: .infinity)
+                .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
+                .cornerRadius(30)
+                .padding(.top)
+        }
+        .simultaneousGesture(TapGesture().onEnded {
+            UserDefaults.standard.set(true, forKey: "onboardingCompleted")
+            UserDefaults.standard.set(name, forKey: "userName")
+            userName = name
+            isOnboardingShown = false
+        })
                 
-        NavigationLink("Continue", destination: ContentView(name: $name))
-                    .foregroundColor(.white)
-                    .disabled(name.isEmpty)
-                    .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
-                    .padding(.vertical, 12)
-                    .frame(maxWidth: .infinity)
-                    .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
-                    .cornerRadius(30)
-                    .padding(.top)
-                
-                //            Button(action: {
-                //                if !name.isEmpty {
-                //
-                //                }
-                //            }
-                //            ){
-                //                Text("Continue")
-                //            }.foregroundColor(.white)
-                //                .disabled(name.isEmpty)
-                //                .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
-                //                .padding(.vertical, 12)
-                //                .frame(maxWidth: .infinity)
-                //                .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
-                //                .cornerRadius(30)
-                //                .padding(.top)
-            
+//        NavigationLink("Continue", destination: ContentView(name: $name))
+//                    .foregroundColor(.white)
+//                    .disabled(name.isEmpty)
+//                    .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
+//                    .padding(.vertical, 12)
+//                    .frame(maxWidth: .infinity)
+//                    .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
+//                    .cornerRadius(30)
+//                    .padding(.top)
         }
        
     

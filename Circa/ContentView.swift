@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var name: String
-    
+    var name: String
     
     var body: some View {
        ZStack{
                 VStack(spacing: 2){
-                    HeaderView(name: $name)
+                    HeaderView(name: name)
                     ScrollView{
                         VStack(spacing: 0){
                             DailySummary(viewModel: SleepViewModel())
@@ -40,6 +39,8 @@ struct ContentView: View {
     }
 }
 
+
+
 #Preview {
-    ContentView(name: .constant("Damilare"))
+    ContentView(name: ("Damilare"))
 }

@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var isOnboardingShown: Bool
 
-    @State private var name: String = ""
-//    let userName = UserDefaults.standard.string(forKey: "userName")
+    @Binding var name: String 
+
     
     var body: some View {
         NavigationStack{
@@ -46,5 +47,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(isOnboardingShown: .constant(true), name: .constant("Damilare"))
 }

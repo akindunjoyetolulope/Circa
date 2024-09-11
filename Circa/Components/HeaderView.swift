@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
-    @Binding var name: String
-    
+     var name: String
     
     var body: some View {
         HStack(spacing:3) {
@@ -34,5 +33,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(name: .constant("Damilare"))
+    HeaderView(name: ("Damilare"))
 }
