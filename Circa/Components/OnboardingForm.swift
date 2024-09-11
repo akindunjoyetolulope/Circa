@@ -31,41 +31,56 @@ struct CustomizeTextField: View {
     var onContinue: () -> Void
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Nice to meet you, I'm...")
-                .foregroundColor(.primaryGray)
-                .font(.custom("FKGroteskNeueTrial-Regular", size: 17))
-                .padding(.bottom, 2)
-            HStack {
-                TextField("Enter your name", text: $name)
-                    .font(.custom("FKGroteskNeueTrial-Regular", size: 15))
-                    .padding(2)
-                    .focused($isFocused)
-                    .tint(.primaryOrange)
-            }
-        }
-        .padding()
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(.textFieldBorder, lineWidth: 1)
-        )
-        .background(.textFieldBg)
+       
+                VStack(alignment: .leading) {
+                    Text("Nice to meet you, I'm...")
+                        .foregroundColor(.primaryGray)
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 17))
+                        .padding(.bottom, 2)
+                    
+                    TextField("Enter your name", text: $name)
+                        .font(.custom("FKGroteskNeueTrial-Regular", size: 15))
+                        .padding(2)
+                        .focused($isFocused)
+                        .tint(.primaryOrange)
+                    
+                }
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(.textFieldBorder, lineWidth: 1)
+                )
+                .background(.textFieldBg)
+                
+        NavigationLink("Continue", destination: ContentView(name: $name))
+                    .foregroundColor(.white)
+                    .disabled(name.isEmpty)
+                    .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
+                    .padding(.vertical, 12)
+                    .frame(maxWidth: .infinity)
+                    .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
+                    .cornerRadius(30)
+                    .padding(.top)
+                
+                //            Button(action: {
+                //                if !name.isEmpty {
+                //
+                //                }
+                //            }
+                //            ){
+                //                Text("Continue")
+                //            }.foregroundColor(.white)
+                //                .disabled(name.isEmpty)
+                //                .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
+                //                .padding(.vertical, 12)
+                //                .frame(maxWidth: .infinity)
+                //                .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
+                //                .cornerRadius(30)
+                //                .padding(.top)
             
-        Button(action: {
-            if !name.isEmpty {
-                onContinue()
-            }
-        }){
-            Text("Continue")
-        }.foregroundColor(.white)
-            .disabled(name.isEmpty)
-            .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
-            .padding(.vertical, 12)
-            .frame(maxWidth: .infinity)
-            .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
-            .cornerRadius(30)
-            .padding(.top)
-    }
+        }
+       
+    
     
     func setActive() {
         
