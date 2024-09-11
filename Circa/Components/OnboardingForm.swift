@@ -71,15 +71,7 @@ struct CustomizeTextField: View {
             isOnboardingShown = false
         })
                 
-//        NavigationLink("Continue", destination: ContentView(name: $name))
-//                    .foregroundColor(.white)
-//                    .disabled(name.isEmpty)
-//                    .font(.custom("FKGroteskNeueTrial-Medium", size: 20))
-//                    .padding(.vertical, 12)
-//                    .frame(maxWidth: .infinity)
-//                    .background(name.isEmpty ? Color.gray.opacity(0.5) : Color.cardBG)
-//                    .cornerRadius(30)
-//                    .padding(.top)
+
         }
        
     
