@@ -53,7 +53,7 @@ struct CustomizeTextField: View {
                 )
                 .background(.textFieldBg)
         
-        NavigationLink(destination: ContentView(name: name)) {
+        NavigationLink(destination: ContentView(viewModel: SleepViewModel(), name: name)) {
             Text("Continue")
                 .foregroundColor(.white)
                 .disabled(name.isEmpty)
@@ -84,3 +84,4 @@ struct CustomizeTextField: View {
 #Preview {
     OnboardingForm()
 }
+

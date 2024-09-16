@@ -32,7 +32,7 @@ struct MainView: View{
         if isOnboardingShown {
             OnboardingView(isOnboardingShown: $isOnboardingShown, name: $userName)
         } else {
-            ContentView(name: userName)
+            ContentView(viewModel: SleepViewModel(), name: userName)
         }
         Button("Reset Onboarding") {
             UserDefaults.standard.set(false, forKey: "onboardingCompleted")
@@ -40,3 +40,4 @@ struct MainView: View{
         }
     }
 }
+
