@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: SleepViewModel
+    @State var showingBottomSheet = false
+
     var name: String
     
     var body: some View {
@@ -33,12 +35,14 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.appBG)
                 .navigationBarBackButtonHidden(true)
+           
+                
             }
-       
-        
-        
+       .blur(radius: showingBottomSheet ? 20 : 0)    
     }
+        
 }
+
 
 
 
