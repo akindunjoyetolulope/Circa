@@ -19,6 +19,7 @@ struct CircaApp: App {
 }
 
 struct MainView: View{
+    @State var showingBottomSheet = false
     @State private var isOnboardingShown: Bool
     @State private var userName: String = ""
     
@@ -32,11 +33,12 @@ struct MainView: View{
         if isOnboardingShown {
             OnboardingView(isOnboardingShown: $isOnboardingShown, name: $userName)
         } else {
-            ContentView(name: userName)
+            ContentView(viewModel: SleepViewModel(),  name: userName)
         }
-        Button("Reset Onboarding") {
-            UserDefaults.standard.set(false, forKey: "onboardingCompleted")
-            isOnboardingShown = true
-        }
+//        Button("Reset Onboarding") {
+//            UserDefaults.standard.set(false, forKey: "onboardingCompleted")
+//            isOnboardingShown = true
+//        }
     }
 }
+

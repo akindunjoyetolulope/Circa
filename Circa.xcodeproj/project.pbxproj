@@ -23,6 +23,8 @@
 		48D6E4B42C82056400001C8F /* CircaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4B32C82056400001C8F /* CircaUITests.swift */; };
 		48D6E4B62C82056400001C8F /* CircaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4B52C82056400001C8F /* CircaUITestsLaunchTests.swift */; };
 		E32E1FD82C823F7C009B7C5E /* DailySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32E1FD72C823F7C009B7C5E /* DailySummary.swift */; };
+		E33684312C987BE3007FE82B /* SleepChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33684302C987BE3007FE82B /* SleepChartView.swift */; };
+		E34F16492C999C0C00B1CCFD /* InfoBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34F16482C999C0C00B1CCFD /* InfoBottomSheet.swift */; };
 		E38F3EA02C89D09200AD7730 /* BottomChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F3E9F2C89D09200AD7730 /* BottomChatView.swift */; };
 		E39786B22C82518900646482 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39786B12C82518900646482 /* HealthManager.swift */; };
 		E39786B52C8251E800646482 /* sleepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39786B42C8251E800646482 /* sleepViewModel.swift */; };
@@ -67,6 +69,8 @@
 		48D6E4B32C82056400001C8F /* CircaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircaUITests.swift; sourceTree = "<group>"; };
 		48D6E4B52C82056400001C8F /* CircaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E32E1FD72C823F7C009B7C5E /* DailySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummary.swift; sourceTree = "<group>"; };
+		E33684302C987BE3007FE82B /* SleepChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepChartView.swift; sourceTree = "<group>"; };
+		E34F16482C999C0C00B1CCFD /* InfoBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBottomSheet.swift; sourceTree = "<group>"; };
 		E38F3E9F2C89D09200AD7730 /* BottomChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomChatView.swift; sourceTree = "<group>"; };
 		E39786AE2C824A8900646482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E39786AF2C824BD100646482 /* Circa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Circa.entitlements; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			children = (
 				481123752C886F5E00ADF1E1 /* BarchartView.swift */,
 				481123822C8A779E00ADF1E1 /* WeeklyLineView.swift */,
+				E33684302C987BE3007FE82B /* SleepChartView.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				481123772C886FB600ADF1E1 /* Overview.swift */,
 				481123802C8A1B1100ADF1E1 /* OnboardingForm.swift */,
 				E38F3E9F2C89D09200AD7730 /* BottomChatView.swift */,
+				E34F16482C999C0C00B1CCFD /* InfoBottomSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -363,9 +369,11 @@
 				481123762C886F5E00ADF1E1 /* BarchartView.swift in Sources */,
 				E39786B22C82518900646482 /* HealthManager.swift in Sources */,
 				481123832C8A779E00ADF1E1 /* WeeklyLineView.swift in Sources */,
+				E34F16492C999C0C00B1CCFD /* InfoBottomSheet.swift in Sources */,
 				48483AD22C829FE5000AE80E /* HeaderView.swift in Sources */,
 				4811237D2C8A00F900ADF1E1 /* OnboardingView.swift in Sources */,
 				4811237B2C8874D200ADF1E1 /* type.swift in Sources */,
+				E33684312C987BE3007FE82B /* SleepChartView.swift in Sources */,
 				E38F3EA02C89D09200AD7730 /* BottomChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

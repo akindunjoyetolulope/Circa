@@ -33,7 +33,7 @@ struct DailySummary: View {
                         Text("Sleep quality: ")
                             .font(.custom("FKGroteskNeueTrial-Regular", size: 14))
                             .kerning(-0.3)
-                            .foregroundColor(.white) + Text(viewModel.sleepQuality).font(.system(size: 13))
+                            .foregroundColor(.white) + Text(viewModel.sleepQuality).font(.custom("FKGroteskNeueTrial-Regular", size: 13))
                             .foregroundColor(
                                 viewModel.sleepQuality == "Good" ? .green :
                                     viewModel.sleepQuality == "Fair" ? .yellow : .primaryOrange

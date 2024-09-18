@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: SleepViewModel
+    @State var showingBottomSheet = false
+
     var name: String
     
     var body: some View {
        ZStack{
-                VStack(spacing: 2){
+                VStack(spacing: 0){
                     HeaderView(name: name)
                     ScrollView{
-                        VStack(spacing: 0){
+                        VStack(spacing: -5){
                             DailySummary(viewModel: SleepViewModel())
                                 .padding(.horizontal)
-                            Overview().padding()
+                            Overview(viewModel: SleepViewModel()).padding()
                             VStack(alignment: .leading){
                                 Text("Recommended Actions")
                                     .foregroundStyle(.textPrimary)
@@ -32,15 +35,18 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.appBG)
                 .navigationBarBackButtonHidden(true)
+           
+                
             }
-       
-        
-        
+       .blur(radius: showingBottomSheet ? 20 : 0)    
     }
+        
 }
+
 
 
 
 #Preview {
-    ContentView(name: ("Damilare"))
+    ContentView(viewModel: SleepViewModel(), name: ("Damilare"))
 }
+

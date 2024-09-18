@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingForm: View {
+    
     @State private var isOnboardingShown: Bool = !UserDefaults.standard.bool(forKey: "onboardingCompleted")
     @State private var userName: String = " "
     
@@ -23,6 +24,7 @@ struct OnboardingForm: View {
 
 
 struct CustomizeTextField: View {
+    @State var showingBottomSheet = false
     @Binding var isOnboardingShown: Bool
     @Binding var userName: String
     @State private var name: String = ""
@@ -53,7 +55,7 @@ struct CustomizeTextField: View {
                 )
                 .background(.textFieldBg)
         
-        NavigationLink(destination: ContentView(name: name)) {
+        NavigationLink(destination: ContentView(viewModel: SleepViewModel(), name: name)) {
             Text("Continue")
                 .foregroundColor(.white)
                 .disabled(name.isEmpty)
@@ -84,3 +86,4 @@ struct CustomizeTextField: View {
 #Preview {
     OnboardingForm()
 }
+
